@@ -26,8 +26,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="First Screen" id="pyl-7U-vEI">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="UjU-Bw-su6" userLabel="item"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="fT6-1J-QmX"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="UjU-Bw-su6" userLabel="item">
+                                            <connections>
+                                                <action selector="decreaseNumber:" destination="BYZ-38-t0r" id="MDe-lj-Ue8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="fT6-1J-QmX">
+                                            <connections>
+                                                <action selector="increaseNumber:" destination="BYZ-38-t0r" id="nYI-oU-KoW"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -35,7 +43,11 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="camera" id="0XP-4r-wd9"/>
+                                    <barButtonItem systemItem="camera" id="0XP-4r-wd9">
+                                        <connections>
+                                            <action selector="resetNumber:" destination="BYZ-38-t0r" id="WB6-Op-G6P"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Hsp-ER-8Hk"/>
                                     <barButtonItem image="ic_shop_two_2x.png" id="klJ-6x-Tdn"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="t5S-Nw-rE9"/>
@@ -55,6 +67,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="yTp-1T-EGd" id="TEY-PG-ZNF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
